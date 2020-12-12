@@ -1,0 +1,2 @@
+demojpa- Using the repository without implementing CrudRepository
+springbootcrudoperations - Using the CrudRepository by implementing JpaRepository on a repository interface
