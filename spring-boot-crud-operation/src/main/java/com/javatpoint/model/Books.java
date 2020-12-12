@@ -60,6 +60,5 @@ public class Books {
 		this.price = price;
 	}
 	
-	
 
 }
