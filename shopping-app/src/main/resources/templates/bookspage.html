@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Shopping App</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body style="font-family: 'Open Sans'">
+<form action="" method="post">
+	<div th:replace="/common/nav.html :: header"></div>
+<div th:fragment="bookspg">
+	<div style="width: 70%; float: left; margin-top: 10px">
+		<div style="height: 250px; background-color: #555; width: 400px; text-align: center; vertical-align: center; color: white">
+			<br><br><br><br><br>
+			<span th:text="${products.name}"></span>
+		</div>
+		<div>
+			<br>
+			<b>Description : </b><span id="description" th:text="${products.description}"></span>
+			<br>
+			<b>Category : </b><span th:text="${bcategory}"></span>
+		</div>
+		<input type="hidden" name="products" id="products" th:value="${products.id}" />
+		<br>
+		<div>
+			<b>Price : </b>₹ <span th:text="${products.price}"></span>
+			<button type="submit" id="addtocart" >Add To Cart</button>
+		</div>
+	</div>
+</div>
+</form>
+</body>
+</html>

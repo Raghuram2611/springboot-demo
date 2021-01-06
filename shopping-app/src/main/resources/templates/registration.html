@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Registration Page</title>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<style>
+	.menu{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		font-family: 'Open Sans';
+        font-weight: 600;
+	}
+	    
+	.arrow {
+ 		border: solid white;
+ 		border-width: 0 3px 3px 0;
+ 		display: inline-block;
+ 		padding: 3px;
+	}
+
+
+	.left {
+ 		transform: rotate(135deg);
+ 		-webkit-transform: rotate(135deg);
+	}
+	
+	.menu a:hover{
+		background-color: #555;
+	}
+	
+	.menu a {
+		display: block;
+		float: left;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	
+	legend {
+		background-color: #333;
+		color: white;
+		padding: 5px 10px;
+	}
+	
+	fieldset {
+		background-color: grey;
+	}
+	
+	button {
+		padding:5px 10px;
+	}
+	
+</style>
+</head>
+<body style="font-family:'Open Sans'">
+	<div class="menu">
+		<a href="/login"><i class="arrow left"></i><span>                       Shopping App</span></a>
+	</div>
+	<br>
+<form action="" method="post">
+<fieldset>
+	<legend>Create New User</legend>
+	<br>
+	<span>Enter User Details</span>
+	<br>
+	<span th:text="${errorMessage}" th:text-color="red"></span>
+	<br>
+	<p>
+	<label for="name">Your Name :</label>
+	<input type="text" id="name" name="name"/>
+	</p>
+	<p>
+	<label for="username">Preferred Username:</label>
+	<input type="text" id="username" name="username"/>
+	</p>
+	<p>
+	<label for="password">Password :</label>
+	<input type="password" id="password1" name="password1"/>
+	</p>
+	<p>
+	<label for="password">Confirm Password :</label>
+	<input type="password" id="password2" name="password2"/>
+	</p>
+	<button type="submit">Submit</button>
+</fieldset>
+</form>
+</body>
+</html>

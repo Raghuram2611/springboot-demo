@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<body>
+<div th:fragment="header">
+	<script>
+	    function myFunc() {
+	        document.getElementById("category").style.visibility = "visible";
+	        document.getElementById("cat").style.backgroundColor = "#555";
+	    }
+	    function closeFun(){
+	        document.getElementById("category").style.visibility = "collapse";
+	        document.getElementById("cat").style.backgroundColor = "#333";
+	    }
+	</script>
+	<div class="menu">
+		<a href="/">Shopping App</a>
+		<a id="cat" onmouseover="myFunc()" onmouseout="closeFun()">Category</a>
+		<a style="float: right" href="/usercart">Cart</a>
+		<div class=" dropdown" style="float: right">
+        	<button class="drpbtn" disabled><span th:text="${user}"></span></button>
+        	<div class="option">
+         		<a href="/logout">Logout</a>
+        	</div>
+        </div>
+	</div>
+    
+	<div id="category" class="category" onmouseover="myFunc()" onmouseout="closeFun()">
+		<div th:each="cat:${category}"><a th:href="@{|/${cat.name}|}"><span th:text="${cat.name}"></span></a></div>
+	</div>
+</div>
+	
+
+</body>
+</html>

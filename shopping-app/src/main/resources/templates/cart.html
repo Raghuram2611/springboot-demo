@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Shopping App Cart</title>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body style="font-family:'Open Sans';">
+<form action="" method="post">
+	<div th:replace="/common/nav.html :: header"></div>
+	<div style="margin-top: 10px">
+    <div>
+        Hello, <span th:text="${user}"></span>
+    </div>
+    <div style="background-color: #555; border-radius: 10px; float: left; padding-right: 50px">
+        <h1 style="margin-left: 50px; padding-top: 10px; color: white">Cart</h1>   
+    <div style="margin-left: 50px; margin-top: 10px">
+	<table style="padding-bottom: 0px; width: 600px; border:solid; margin-bottom: 20px">
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+		</tr>
+		<tr th:each="product:${products}">
+			<td style="height: 30px"><b><span th:text="${product.name}"></span></b></td>
+			<td style="height: 30px"><span th:text="${product.price}"></span></td>
+         </tr>
+	</table>
+	</div>
+	</div>
+	</div>
+</form>
+</body>
+</html>

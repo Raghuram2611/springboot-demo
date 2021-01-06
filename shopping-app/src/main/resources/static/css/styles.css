@@ -1,0 +1,104 @@
+	.menu{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		font-family: 'Open Sans';
+        font-weight: 600;
+	}
+    
+	.category{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #555;
+		font-family: 'Open Sans';
+        font-weight: 600;
+        visibility: hidden;
+	}
+	
+	.option a {
+ 		float: none;
+ 		color: black;
+ 		text-decoration: none;
+ 		display: block;
+ 		text-align: center;
+	}
+	
+	.drpbtn {  
+ 		border: none;
+ 		outline: none;
+ 		color: white;
+ 		padding: 16px 22px;
+ 		background-color: inherit;
+ 		font-family: inherit;
+        font-weight: 600;
+ 		margin: 0;
+	}
+	
+	.drpbtn:hover {
+		background-color: #555;
+	}
+	
+	.option {
+		position:absolute;
+		display:none;
+		background-color: #333;
+	}
+	
+	.dropdown:hover .option {
+		display: block;
+	}
+	
+	.dropdown:hover .drpbtn {
+		background-color: #555;
+	}
+	
+	.menu a, .category a{
+		display: block;
+		float: left;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	
+	.menu a:hover{
+		background-color: #555;
+	}
+    
+	.category a:hover{
+		background-color: #777;
+	}
+	
+    table {
+        width: 50%;
+    }
+    
+    td:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    td:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    td {
+        text-align: center;
+        height: 170px;
+        background-color: #767676;
+    }
+    
+    img {
+        height: 150px;
+    }
+    
+    #addtocart {
+    	background-color: yellow;
+    	border: solid black thin;
+    	padding: 5px 15px;
+    }
